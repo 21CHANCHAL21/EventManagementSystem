@@ -1,0 +1,86 @@
+/* src/components/Header.css */
+.header {
+    background-color: #666363;
+    color: #42d56e;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 15px 0px 15px;
+    text-align: center;
+  }
+  
+  .heading {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 0;
+    text-align: center;
+    height: 70px;
+   padding-top: 5px;
+  }
+  
+  .nav {
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: rgb(202, 223, 240);
+    margin: 0px;
+    border-radius: 5px;
+  }
+  
+  .nav-list {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-right {
+    margin-left: auto;
+  }
+  
+  .nav-item {
+    margin-right: 25px;
+  }
+  
+  .nav-link {
+    color:black;
+    text-decoration: none;
+
+  }
+  /* .nav-link:hover {
+    background-color: rgb(156, 156, 221);
+    border-radius: 2px;
+    padding: 5px;
+  } */
+  
+  
+  .hidden-button {
+    opacity: 0; /* Or use visibility: hidden; */
+    pointer-events: none;
+  }
+
+  .hidden-button {
+    visibility: hidden; /* Hides the button but keeps its space */
+  }
+
+  .button {
+    background-color: #ff4d4d; /* Red color for cancellation */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 10px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .button:hover {
+    background-color: #e60000; /* Darker red on hover */
+  }
+  
+  .button:active {
+    transform: scale(0.98); /* Slight scale effect on click */
+  }
+  
+  

@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+// src/App.js
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Header from './Components/Header';
+import Footer from './Components/Footer';
+// import HomePage from './pages/HomePage';
+import ProfilePage from './pages/ProfilePage';
+import SignInPage from './pages/SignInPage';
+import SignUpPage from './pages/SignUpPage';
+import AddEventPage from './pages/AddEventPage';
+// import DeleteEventPage from './pages/DeleteEventPage';
+import EventsPage from './pages/EventsPage';
+import "./App.css";
 
-function App() {
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Header />
+      <div className="main-content">
+        <Routes>
+      
+          <Route path="/profile" element={<ProfilePage />} />
+          <Route path="/signin" element={<SignInPage />} />
+          <Route path="/signup" element={<SignUpPage />} />
+          <Route path="/" element={<EventsPage />} />
+        <Route path="/add-event" element={<AddEventPage />} />
+        <Route path="/events" element={<EventsPage />} />
+          {/* <Route path="/delete-event" element={<DeleteEventPage />} /> */}
+        </Routes>
+      </div>
+      <Footer />
+    </Router>
   );
-}
+};
 
 export default App;
